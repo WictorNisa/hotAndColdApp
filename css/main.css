@@ -1,0 +1,120 @@
+/* ==========================BASE STYLES============================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Playfair Display', serif;
+ background-color: #E2E3E3;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+/* ============================================================= */
+
+/* =========================MAIN GRID============================= */
+
+#main-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.main-h1{
+  font-size: 1.5em;
+  font-weight: lighter;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 1em 0 1em;
+}
+
+.main-p{
+  font-weight: lighter;
+  text-align: center;
+  color: #fff;
+  padding: 0 1em 0 1em;
+}
+
+.hot-contain{
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-image: url('../img/fire2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.cold-contain{
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-image: url('../img/ice2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hot-timer-contain{
+  width: 70%;
+  height: 300px;
+  margin: auto;
+  opacity: 1;
+}
+
+.cold-timer-contain{
+  width: 70%;
+  height: 100px;
+  margin: auto;
+  background: #bdc3c7;
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  opacity: .6;
+}
+
+.start-button{
+  color: white;
+  width: 40%;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  background: #0F2027;
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-bottom: 5em;
+  opacity: .8;
+}
+
+.timer-p{
+  margin: auto;
+  font-size: 6em;
+  color: #ffffff;
+  text-align: center;
+  opacity: 1;
+}
