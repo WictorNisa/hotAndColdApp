@@ -1,6 +1,6 @@
 const mainDiv = document.getElementById('main-wrap');
 const HotContain = document.querySelector('.hot-contain');
-const HotTimerDiv = document.getElementById('hotId');
+const TimerDiv = document.querySelector('.timer-contain');
 const ColdTimerDiv = document.getElementById('coldId');
 const ColdContain = document.querySelector('.cold-contain');
 const startButton = document.querySelector('.start-button');
@@ -8,7 +8,7 @@ let countdown;
 
 
 startButton.addEventListener('click', () =>{
-  timer(10);
+  timer(300);
 });
 
 function timer(seconds) {
@@ -19,10 +19,9 @@ function timer(seconds) {
   setInterval(() =>{
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     if(secondsLeft < 0){
-      clearInterval(countdown);
       HotContain.style.display = 'none';
       ColdContain.style.display = 'flex';
-      displayTimeLeft(100);
+      timer(100);
     }
     displayTimeLeft(secondsLeft);
   }, 1000);
@@ -35,6 +34,5 @@ function displayTimeLeft(seconds) {
   const display = `
     <p class="timer-p">${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}</p>
   `;
-  HotTimerDiv.innerHTML = display;
-
+  TimerDiv.innerHTML = display;
 }

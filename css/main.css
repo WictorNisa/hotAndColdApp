@@ -78,7 +78,7 @@ button:focus {
   flex-direction: column;
 }
 
-.hot-timer-contain{
+.timer-contain{
   width: 70%;
   height: 300px;
   margin: auto;
@@ -109,6 +109,7 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   border-radius: 20px;
   margin-bottom: 5em;
   opacity: .8;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .timer-p{
